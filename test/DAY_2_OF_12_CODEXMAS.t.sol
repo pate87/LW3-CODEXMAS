@@ -18,4 +18,11 @@ contract LW3_ChristmasSmartContract_2_Test is Test {
         string memory resultText = lw3_Test.getText(inputText);
         assert(keccak256(abi.encodePacked(resultText)) == keccak256(abi.encodePacked(expectedText)));
     }
+
+    // function getText2() public {
+    //     string memory inputText = "Hello, world!";
+    //     assertEq(lw3_Test.getText(inputText), 
+    //     "Hello, world! Merry Christmas!");
+
+    // }
 }
