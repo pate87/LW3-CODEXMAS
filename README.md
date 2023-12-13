@@ -7,3 +7,6 @@ Contract Address Sepolia
 
 Contract #2
 https://sepolia.etherscan.io/address/0x6c73340c3e0c3e836357ffe9f23f247e890ac5d1
+
+Contract #3
+https://sepolia.etherscan.io/address/0x8a62f3a1995bd93d15bd890cb0cd4efd450f5b1d
