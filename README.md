@@ -18,3 +18,6 @@ https://sepolia.etherscan.io/token/0xa75ff6455f32b5ce4182b6f0e87ac6dbe2b162f2?a=
 
 Challenge #5
 https://sepolia.etherscan.io/address/0x33c565f651575af1d1898b83fe92cf3c2f6526db
+
+Challenge #6
+https://sepolia.etherscan.io/address/0x5312ffb4811d4f467f232ae7b97c8bd8044b7b2d
