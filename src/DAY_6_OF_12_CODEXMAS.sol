@@ -1,12 +1,21 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.22;
 
-// Challenge #6
 contract Challenge6{
 
+    event Withdraw (address index, uint256 amount);
     error TransferFailed();
 
-    mapping (address => uint256) public balance;
+    bool internal locked;
+    modifier noReentrant() {
+        require(!locked, "You're locked");
+        locked = true;
+        _;
+        locked = false;
+    }
+
+
+    mapping (address => uint256) balance;
 
     function send(uint256 _amount) external payable returns(uint256) {
 
@@ -14,15 +23,23 @@ contract Challenge6{
         return balance[msg.sender];
     }
 
-    function withdraw(uint256 _amount) external payable returns(bool) {
-        require(balance[msg.sender] >= _amount, "You have not enough balance");
+    function getBalance() external view returns(uint256) {
+        return balance[msg.sender];
+    }
+
+    function withdraw(uint256 amount) external payable noReentrant {
+        require(balance[msg.sender] >= amount, "You have not enough balance");
         
-        balance[msg.sender] -= _amount;
-        (bool success, ) = payable(msg.sender).call{value: _amount}("");
+        balance[msg.sender] -= amount;
+        (bool success, ) = payable(msg.sender).call{value: amount}("");
         if(!success) revert TransferFailed();
 
-        return success;
+        emit Withdraw (msg.sender, amount);
+
     }
+
+    receive() external payable { }
+
 }
 
 // https://sepolia.etherscan.io/address/0x5312ffb4811d4f467f232ae7b97c8bd8044b7b2d
