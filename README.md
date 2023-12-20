@@ -27,3 +27,6 @@ https://sepolia.etherscan.io/address/0x1c12768e4c2b8071d195be126a1b7a0d42e351d9#
 
 Challenge #8
 I haven't deployed the contract because I don't have a real image URI. This is only a test ERC1155 contract and is not audited or tested.
+
+Callenge #9
+https://sepolia.etherscan.io/address/0xebe03dd3be344decff9abb3b8c823a1f01cce9e2#readContract
