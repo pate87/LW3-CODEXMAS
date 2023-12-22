@@ -33,3 +33,8 @@ https://sepolia.etherscan.io/address/0xebe03dd3be344decff9abb3b8c823a1f01cce9e2#
 
 Challenge #10
 https://sepolia.etherscan.io/address/0x6b9e8b933a67afecace67a5b7c4d977d04793c4f#code
+
+Challenge #11
+Contract Good https://sepolia.etherscan.io/address/0xcaba8ce6e064f95aeb1583c528a2ae3888195528#code
+
+Contract Attack https://sepolia.etherscan.io/address/0x905af90f5561a8080878c2e93459d932d8906b59#code
